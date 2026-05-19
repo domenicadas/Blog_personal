@@ -4,11 +4,13 @@
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width; initial-scale=1.0">
      <title>Blog personal</title>
+     <link rel="stylesheet" href="estilos.css">
     </head>
     <body>
        <nav>
+        <span class="logo">Mi Blog</span>
           <ul>
-            <li> <a>Información básica</a></li>
+            <a href="#" class="activo">Información básica</a>
             <li> <a href="datos_curiosos.html">Datos curiosos</a></li>
             <li> <a href="familia.html">Familia</a></li>
             <li> <a href="mascotas.html">Mascotas</a></li>
@@ -18,7 +20,12 @@
             <li> <a href="artistas.html">Artistas</a></li>
           </ul>
        </nav>
-      <h1>Información básica</h1>
+       
+        <section id="sobre-mi">
+            <h2>Sobre mi</h2>
+            <div class="perfil">
+                <div class="avatar">😎</div>
+                <h1>Información básica</h1>
       <p> Hola! Mi nombre es Doménica Sarango, conocida
           en algunos sitios como Domenicadas y en otros como Chango.</p>
           <figure>
@@ -35,5 +42,11 @@
       <p> 150 cm</p>
       <h4>Color favorito:</h4>
       <p> Rosado</p>
+            </div>
+        </section>
+      
+    <footer>
+            <p>Programando 😎 y CSS - 2026</p>
+        </footer> 
     </body>
 </html>

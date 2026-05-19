@@ -1,0 +1,154 @@
+/* VARIABLES - Paleta de colores del sitio */
+:root {
+    --color-fondo: #f8f5ff;
+    --color-primario: #FF76CE;
+    --color-secundario: #E69DB8;
+    --color-texto: #1e1b4b;
+    --color-tarjeta: #A3D8FF;
+    --fuente: 'Segoe UI', sans-serif;
+}
+
+/* RESET - Borrar estilos por defecto del navegadores */ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;    
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: var(--fuente);
+    line-height: 1.7;
+}
+
+/* NAVEGACION */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background-color: #FFC7EA;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-primario);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: var(--color-texto);
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+nav a:hover {
+    color: var(--color-secundario);
+}
+
+nav a.activo {
+    color: var(--color-primario);
+    font-weight: bold;
+    border-bottom: 2px solid var(--color-primario);
+    padding-bottom: 3px;
+}
+
+/* ===================================================
+    SECCION FOOTER
+   =================================================== */
+
+footer{
+    text-align: center;
+    padding: 30px;
+    background-color: #ede9fe;
+    font-size: 0.9rem;
+}
+
+/* ===================================================
+    SECCION INICIO
+   =================================================== */
+
+#inicio {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+}
+
+#inicio h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.nombre {
+    color: var(--color-primario);
+}
+
+#inicio p{
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin-bottom: 30px;
+    color: #4b5563;
+}
+
+.boton {
+    background-color: var(--color-primario);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.boton:hover{
+    background-color: var(--color-secundario);
+}
+
+/* ===================================================
+    SECCION SOBRE MI
+   =================================================== */
+
+#sobre-mi {
+    padding: 80px 60px;
+    text-align: center;
+}
+
+#sobre-mi h2 {
+    font-size: 2rem;
+    color: var(--color-secundario);
+    margin-bottom: 40px;
+}
+
+.perfil{
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: var(--color-tarjeta);
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid #ede9fe;
+    box-shadow: 0 4px 20px rgba(124,58,237,0.08);
+}
+
+.avatar {
+    font-size: 5rem;
+    margin-bottom: 20px;
+}
+
+.perfil .p {
+    color:#4b5563;
+    font-size: 1.05rem;
+}
