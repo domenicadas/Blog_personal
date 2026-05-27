@@ -4,7 +4,7 @@
     --color-primario: #FF76CE;
     --color-secundario: #E69DB8;
     --color-texto: #1e1b4b;
-    --color-tarjeta: #A3D8FF;
+    --color-tarjeta: #FFDBFD;
     --fuente: 'Segoe UI', sans-serif;
 }
 
@@ -33,6 +33,7 @@ nav{
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0, 0.08);
     position: sticky;
     top: 0;
+    z-index: 10;
 }
 
 .logo {
@@ -87,12 +88,6 @@ footer{
 
 
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 #inicio {
     min-height: 80vh;
     width: 100%;
@@ -141,7 +136,7 @@ footer{
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(255, 199, 234, 0.55);
+    background: rgba(255, 199, 233, 0.726);
     z-index: 1;
 }
 
@@ -209,32 +204,128 @@ footer{
    =================================================== */
 
 #sobre-mi {
-    padding: 80px 60px;
+    padding: 40px 60px;
     text-align: center;
+    color:var(--color-primario);
 }
 
 #sobre-mi h2 {
     font-size: 2rem;
     color: var(--color-secundario);
     margin-bottom: 40px;
+    text-align: center;
 }
 
 .perfil{
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card{
+    width: 320px;
+    min-height: 550px;
+    padding: 20px;
+    border-radius: 25px;
+    background: var(--color-tarjeta);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+    transition: 0.3s ease;
+}
+.info-card{
     max-width: 500px;
-    margin: 0 auto;
-    background-color: var(--color-tarjeta);
-    padding: 40px;
+    text-align: left;
+    color: var(--color-texto);
+}
+
+.encabezado-card{
+    padding: 20px;
+    text-align: center;
+    color: var(--color-primario);
+}
+
+.avatar{
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+figcaption{
+    color:var(--color-texto)
+}
+
+.info-card h4{
+    color: var(--color-primario);
+    margin-top: 15px;
+    margin-bottom: 3px;
+}
+
+
+.foto-card img{
+    width: 320px;
     border-radius: 20px;
-    border: 1px solid #ede9fe;
-    box-shadow: 0 4px 20px rgba(124,58,237,0.08);
 }
 
-.avatar {
-    font-size: 5rem;
-    margin-bottom: 20px;
+/* ===================================================
+    SECCION AMIGOS
+   =================================================== */
+#amigos{
+    padding: 40px;
 }
 
-.perfil .p {
-    color:#4b5563;
-    font-size: 1.05rem;
+.titulo-amigos{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: var(--color-secundario);
 }
+
+.contenedor-amigos{
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card img{
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+.card:hover{
+    transform: translateY(-8px);
+}
+
+.card p{
+    text-align: left;
+    margin-top: 15px;
+}
+
+.card li{
+    text-align: left;
+    margin-left: 10px;
+}
+
+.card h2 {
+    color:var(--color-primario)
+}
+
+details{
+    margin-top: 15px;
+}
+
+summary{
+    cursor: pointer;
+    color: var(--color-primario);
+    font-weight: bold;
+}
+
+summary:hover{
+    color: var(--color-secundario);
+}
+
