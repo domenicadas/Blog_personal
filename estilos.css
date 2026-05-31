@@ -5,7 +5,7 @@
     --color-secundario: #E69DB8;
     --color-texto: #1e1b4b;
     --color-tarjeta: #FFDBFD;
-    --fuente: 'Segoe UI', sans-serif;
+    --fuente: 'Poppins', sans-serif;
 }
 
 /* RESET - Borrar estilos por defecto del navegadores */ 
@@ -25,7 +25,6 @@ body {
 
 /* NAVEGACION */
 nav{
-    display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 30px;
@@ -34,6 +33,8 @@ nav{
     position: sticky;
     top: 0;
     z-index: 10;
+    display: grid;
+    grid-template-columns: 200px 1fr;
 }
 
 .logo {
@@ -72,7 +73,7 @@ nav a.activo {
 }
 
 /* ===================================================
-    SECCION FOOTER
+    FOOTER
    =================================================== */
 
 .footer{
@@ -132,8 +133,6 @@ nav a.activo {
 /* ===================================================
     SECCION INICIO
    =================================================== */
-
-
 
 #inicio {
     min-height: 80vh;
@@ -256,12 +255,23 @@ nav a.activo {
     color:var(--color-primario);
 }
 
-#sobre-mi h2 {
-    font-size: 2rem;
-    color: var(--color-secundario);
-    margin-bottom: 40px;
-    text-align: center;
+.titulo-sobre-mi{
+    text-align:center;
+    color:var(--color-secundario);
+    font-size:2rem;
+    padding: 5PX;
+    margin-bottom: 10px;
 }
+
+.titulo-info{
+    text-align:center;
+    color:var(--color-primario);
+    font-size: 2rem;
+    padding: 5PX;
+    margin-bottom: 10px;
+    white-space: nowrap;
+}
+
 
 .perfil{
   display: flex;
@@ -271,45 +281,49 @@ nav a.activo {
   flex-wrap: wrap;
 }
 
-.card{
-    width: 300px;
-    min-height: 700px;
-    padding: 20px;
-    border-radius: 25px;
+.card-info{
+    width: 420px;
     background: var(--color-tarjeta);
+    padding: 35px;
+    border-radius: 25px;
     box-shadow: 0 6px 18px rgba(0,0,0,0.10);
-    transition: 0.3s ease;
-}
-.info-card{
-    max-width: 500px;
     text-align: left;
+    
+}
+
+.encabezado-info{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.card-info:hover{
+    transform: translateY(-8px);
+}
+
+.card-info h4{
+    color: var(--color-primario);
+    margin-top: 15px;
+}
+
+.card-info p{
     color: var(--color-texto);
 }
 
-.encabezado-card{
-    padding: 20px;
-    text-align: center;
-    color: var(--color-primario);
+.foto-info{
+    background: var(--color-tarjeta);
+    padding: 25px;
+    border-radius: 25px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.10);
 }
 
-.avatar{
-    font-size: 4rem;
-    margin-bottom: 10px;
+.foto-info:hover{
+    transform: translateY(-8px);
 }
 
-figcaption{
-    color:var(--color-texto)
-}
-
-.info-card h4{
-    color: var(--color-primario);
-    margin-top: 15px;
-    margin-bottom: 3px;
-}
-
-
-.foto-card img{
+.foto-info img{
     width: 320px;
+    height: 220px;
+    object-fit: cover;
     border-radius: 20px;
 }
 
@@ -335,18 +349,10 @@ figcaption{
     align-items: flex-start;
 }
 
-.contenedor-amigos{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 25px;
-    justify-content: center;
-    align-items: flex-start;
-}
-
 .card-amigo{
-    width: 300px;
+    width: 320px;
     height: 650px;
-    padding: 20px;
+    padding: 35px;
     border-radius: 25px;
     background: var(--color-tarjeta);
     box-shadow: 0 6px 18px rgba(0,0,0,0.10);
@@ -356,7 +362,7 @@ figcaption{
 
 .card-amigo img{
     width: 100%;
-    height: 230px;
+    height: 200px;
     object-fit: cover;
     border-radius: 18px;
 }
@@ -368,15 +374,14 @@ figcaption{
 .card-amigo p,
 .card-amigo li{
     text-align: left;
+    padding: 5px;
 }
 
 .card-amigo h2{
     color: var(--color-primario);
 }
 
-.card:hover{
-    transform: translateY(-8px);
-}
+
 
 
 
@@ -395,14 +400,15 @@ summary:hover{
 }
 
 
-#artistas{
-    padding: 40px;
-    text-align: center;
-}
+
 
 /* ===================================================
     SECCION ARTISTAS
    =================================================== */
+#artistas{
+    padding: 40px;
+    text-align: center;
+}
 .biblioteca{
     width: 800px;
     height: 1200px;
@@ -455,4 +461,220 @@ summary:hover{
 .cancion7{
     top: 980px;
     left: 220px;
+}
+
+/* ===================================================
+    SECCION ESTUDIOS
+   =================================================== */
+#estudios{
+    padding: 40px;
+}
+
+#estudios h1{
+    text-align: center;
+    color: var(--color-primario);
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.timeline{
+    position: relative;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.timeline::before{
+    content: "";
+    position: absolute;
+    left: 180px;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--color-primario);
+}
+
+.evento{
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    margin-left: 20px;
+}
+
+.fecha{
+    width: 150px;
+    text-align: right;
+    margin-right: 65px;
+    padding-right: 45px;
+    font-weight: bold;
+    color: var(--color-primario);
+}
+
+.contenido{
+    width: 430px;
+    background: var(--color-tarjeta);
+    padding: 35px;
+    border-radius: 18px;
+}
+
+.contenido h2{
+    color: var(--color-primario);
+}
+.evento::after{
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: var(--color-primario);
+    border-radius: 50%;
+    position: absolute;
+    left: 170px;
+}
+
+/* ===================================================
+    SECCION COMBINADA: DATOS C E INTERESES
+   =================================================== */
+
+#combinado{
+    padding: 40px;
+}
+
+.fila{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:30px;
+    margin:40px 0;
+}
+
+.fila.inversa{
+    flex-direction: row-reverse;
+}
+
+.tarjeta-titulo{
+    width:250px;
+    height:180px;
+    background:var(--color-tarjeta);
+    border-radius:25px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    box-shadow:0 6px 18px rgba(0,0,0,.10);
+}
+
+.tarjeta-titulo h2{
+    color: var(--color-primario);
+    font-size: 1.8rem;
+    font-weight:bold;
+}
+.tarjeta-contenido{
+    max-width:800px;
+    background:var(--color-tarjeta);
+    padding:30px;
+    border-radius:25px;
+    box-shadow:0 6px 18px rgba(0,0,0,.10);
+}
+
+.tarjeta-titulo:hover{
+    transform: translateY(-8px);
+}
+/* ===================================================
+    SECCION FAMILIA
+   =================================================== */
+
+#familia{
+    padding: 40px;
+}
+
+.foto-familia{
+    width: 80%;
+    max-width: 300px;
+    border-radius: 25px;
+    display: block;
+    margin: 0 auto 30px;
+}
+
+
+.intro-familia{
+    text-align:center;
+    max-width:800px;
+    margin:0 auto 50px;
+}
+
+.tarjeta-familia{
+    max-width:800px;
+    min-width: 800px;
+    background:var(--color-tarjeta);
+    padding:35px;
+    padding-right: 10px;
+    border-radius:25px;
+    box-shadow:0 6px 18px rgba(0,0,0,.10);
+}
+
+.tarjeta-familia h2{
+    color: var(--color-primario);
+    font-size: 1.8rem;
+    font-weight:bold;
+}
+.tarjeta-foto{
+    width:350px;
+    height:250px;
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:0 6px 18px rgba(0,0,0,.10);
+}
+
+.tarjeta-foto:hover{
+    transform: translateY(-8px);
+}
+.tarjeta-foto img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* ===================================================
+    SECCION MASCOTAS
+   =================================================== */
+#mascotas{
+    padding: 40px;
+}
+
+.contenedor-mascotas{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.card-mascota{
+    width: 400px;
+    height: 550px;
+    padding: 35px;
+    border-radius: 25px;
+    background: var(--color-tarjeta);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+    transition: 0.3s ease;
+    overflow: auto;
+}
+
+.card-mascota img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+.card-mascota:hover{
+    transform: translateY(-8px);
+}
+
+.card-mascota p,
+.card-mascota li{
+    text-align: left;
+    padding: 5px;
+}
+
+.card-mascota h2{
+    color: var(--color-primario);
 }
